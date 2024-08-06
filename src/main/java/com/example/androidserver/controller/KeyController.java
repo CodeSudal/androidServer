@@ -13,7 +13,6 @@ public class KeyController {
     @GetMapping("/api/publicKey")
     public String getPublicKey() {
         PublicKey publicKey = KeyPairGeneratorUtil.getKeyPair().getPublic();
-        System.out.println(publicKey);
         return Base64.getEncoder().encodeToString(publicKey.getEncoded());
     }
 }
